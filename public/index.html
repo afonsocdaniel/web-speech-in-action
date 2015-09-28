@@ -57,6 +57,8 @@ var recognitionOpen = false;
 
 if ('webkitSpeechRecognition' in window) {
   var recognition = new webkitSpeechRecognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
 
   recognition.onstart = function() {
     recognitionOpen = true;
